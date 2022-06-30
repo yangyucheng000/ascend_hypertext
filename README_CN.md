@@ -179,20 +179,7 @@ python train.py --datasetdir ./data/iflytek_public --datasetType iflytek --devic
 ```
 
 
-```bash
-tnews
-iflytek
-```
 
-## 分布式训练
-
-
-```bash
-tnews
-iflytek
-```
-
-其中：{device_num}代表并行的卡的数量，例如：4或者8
 
 # 评估过程
 
@@ -210,10 +197,7 @@ python eval.py --datasetdir ./data/iflytek_public --datasetType iflytek  --model
 ```
 
 
-```bash
-tnews
-iflytek
-```
+
 
 # 推理过程
 
@@ -231,10 +215,7 @@ python export.py --modelPath ./output/hypertext_iflytek.ckpt --datasetType iflyt
 ```
 
 
-```shell
-tnews
-iflytek
-```
+
 
 ## 在Ascend310执行推理
 
@@ -273,31 +254,37 @@ acc: 0.8180614591317679
 
 ##### tnews上的HyperText
 
-| -------------------| --------------------------------------  | -------------------------------------- |
-| 模型版本              | HyperText                                               | HyperText |
-| 上传日期              | 2021-11-18  ;                                           | 2021-11-18 |
-| MindSpore版本    | 1.3.0                                                        | 1.5.0 |
-| 数据集                 | tnews                                                       | tnews           |
-| 训练参数              |  epoch=2, batch_size = 32                        |   epoch=2, batch_size = 32  |
-| 优化器                  | radam                                                     |  radam|
-| 损失函数              | SoftmaxCrossEntropyWithLogits               | SoftmaxCrossEntropyWithLogits |
-| 输出                    | 精度                                                          |  精度 |
-| 损失                      | 0.9087                                                    |  0.905 |
-| 速度                      | 1958.810毫秒/步（单卡）                          | 315.949毫秒/步（单卡） |
+
+| 参数                 |  GPU |
+| -------------------|  -------------------------------------- |
+| 模型版本              |HyperText |
+| 资源                    |  GPU(Tesla V100 SXM2)；CPU：2.1GHz，24核；内存：128G |
+| 上传日期              |  2021-11-18 |
+| MindSpore版本    |  1.5.0 |
+| 数据集                 |  tnews           |
+| 训练参数              |   epoch=2, batch_size = 32  |
+| 优化器                  |  radam|
+| 损失函数              |  SoftmaxCrossEntropyWithLogits |
+| 输出                    |  精度 |
+| 损失                      |  0.905 |
+| 速度                      | 315.949毫秒/步（单卡） |
 
 ##### iflytek上的HyperText
 
-| -------------------------- | -------------------------------------- | -------------------------------------- |
-| 模型版本              | HyperText                                               | HyperText |
-| 上传日期              | 2021-11-18  ;                                           | 2021-11-18 |
-| MindSpore版本      | 1.3.0                                                      | 1.5.0 |
-| 数据集                    | iflytek                                                    | iflytek          |
-| 训练参数               |  epoch=2, batch_size = 32                       |   epoch=2, batch_size = 32  |
-| 优化器                  | radam                                                     |  radam|
-| 损失函数              | SoftmaxCrossEntropyWithLogits               | SoftmaxCrossEntropyWithLogits |
-| 输出                    | 精度                                                          |  精度 |
-| 损失                      | 0.57                                                        |  0.5776 |
-| 速度                      | 395.895毫秒/步（单卡）                            | 597.672毫秒/步（单卡） |
+| 参数                 |  GPU |
+| -------------------------- | -------------------------------------- |
+| 模型版本              |  HyperText |
+| 资源                   |  GPU(Tesla V100 SXM2)；CPU：2.1GHz，24核；内存：128G   |
+| 上传日期              |  2021-11-18 |
+| MindSpore版本      |  1.5.0 |
+| 数据集                    | iflytek          |
+| 训练参数               | epoch=2, batch_size = 32  |
+| 优化器                  |  radam|
+| 损失函数              | SoftmaxCrossEntropyWithLogits |
+| 输出                    | 精度 |
+| 损失                      |  0.5776 |
+| 速度                      | 597.672毫秒/步（单卡） |
+
 
 # ModelZoo主页
 
